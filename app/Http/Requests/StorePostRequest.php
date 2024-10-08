@@ -23,7 +23,7 @@ class StorePostRequest extends FormRequest
     {
         return [
             'title' => ['required', 'min:3'],
-            'problematic' => ['required', 'string'],
+            'problematic' => ['string'],
             'tags' => ['required', 'string'], 
             'content' => ['required', 'string']
         ];

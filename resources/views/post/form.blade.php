@@ -39,7 +39,7 @@
 
                             <div class="row">
                                 <div class="col field">
-                                  <input id="problematic" type="text" name="problematic" value="{{old('problematic', $post->problematic)}}" class="field__input field--email required" required>
+                                  <input id="problematic" type="text" name="problematic" value="{{old('problematic', $post->problematic)}}" class="field__input field--email required">
                                   <label for="problematic" class="field__label">Problematique</label>
                                 </div>
                             </div>

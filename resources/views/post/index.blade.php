@@ -14,16 +14,16 @@
                     <!-- blog grid -->
                     
 
-                    <div class="row"> @php $i = 1 ;  @endphp
+                    <div class="row">
 
                         @foreach ($posts as $post)
                         <div class="col col--sm-6 col--md-4">
-                            <a href="{{route('articles.show', $post)}}" class="blog__item">
+                            <a href="{{route('articles.show', [$post->slug(), $post])}}" class="blog__item">
                                 <figure class="blog__item-img">
-                                    <img src="img/post-{{$loop->iteration > 9 ? $i++ : $loop->iteration }}.jpg" alt="{{$post->title}}">
+                                    <img src="img/article-{{$loop->iteration }}.jpg" alt="{{$post->title}}">
                                 </figure>
                                 <h5 class="blog__item-title">{{$post->title}}</h5>
-                                <p class="blog__item-text">{{Str::limit($post->content, 150)}}</p>
+                                <p class="blog__item-text">{!! Str::limit($post->content, 150) !!}</p>
                                 <p class="blog__item-date">{{$post->created_at->translatedFormat('d M Y')}}</p>
                             </a>
                         </div>

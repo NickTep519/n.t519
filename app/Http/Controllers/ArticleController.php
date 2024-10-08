@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Parsedown;
 use App\Models\Post;
+use Illuminate\Support\Str;
 
 
 class ArticleController extends Controller
@@ -19,8 +20,13 @@ class ArticleController extends Controller
 
     
     
-    public function show(Post $post)
+    public function show(string $slug, Post $post)
     {
+
+        if ($slug != $post->slug()) {
+            
+            return to_route('articles.show', [$post->slug(), $post]) ; 
+        }
 
         $post = Post::with( [
                         'comments' => function($query) {

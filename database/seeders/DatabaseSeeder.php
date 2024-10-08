@@ -30,7 +30,7 @@ class DatabaseSeeder extends Seeder
             'adress' => 'Abomey-Calavi, Eg Ste J-B'
         ]) ;
         
-        Contact::factory(2)->create() ; 
+        /*Contact::factory(2)->create() ; 
 
         $tags = Tag::factory(10)->create() ; 
 
@@ -61,7 +61,7 @@ class DatabaseSeeder extends Seeder
         Reply::factory(50)->create()->each(function($reply) use ($comments) {
             $reply->comment()->associate($comments->random()) ; 
             $reply->save() ; 
-        }) ; 
+        }) ; */
 
 
 

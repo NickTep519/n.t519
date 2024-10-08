@@ -41,8 +41,11 @@ class PostController extends Controller
             'content' => 'Contenu de l\'article',
         ]) ; 
 
+        $tags = '' ; 
+
         return view('post.form', [
-            'post' => $post
+            'post' => $post,
+            'tags' => $tags
         ]) ; 
     }
 
@@ -75,7 +78,7 @@ class PostController extends Controller
 
         }
 
-        return redirect('posts.show', $post)->with('success', 'Nouvel article ajouté') ; 
+        return to_route('posts.show', $post)->with('success', 'Nouvel article ajouté') ; 
     }
 
    

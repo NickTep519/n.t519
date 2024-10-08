@@ -19,13 +19,13 @@
                     <div class="row">
                         <div class="col col--sm-10 col--sm-offset-1 col--md-10 col--md-offset-1 col--lg-8 col--lg-offset-2">
                             <div class="article__text article__text--large">
-                                <p>{{$post->problematic}}</p>
+                                <p</p>
                             </div>
                         </div>
                         <div class="col col--lg-10 col--lg-offset-1">
                             <div class="article__image">
                                 <figure>
-                                    <img src="{{asset('img/article-img.jpg')}}" alt="">
+                                    <img src="{{asset('img/article-1.jpg')}}" alt="">
                                 </figure>
                             </div>
                         </div>
@@ -89,7 +89,7 @@
                                                 <div class="comment__time">{{ $comment->created_at->diffForHumans() }}</div>
                                                 <div class="comment__text"> {{ $comment->content }} </div>
                                                 <div class="comment__reply">
-                                                    <a href="article.html#" class="btn btn--reply">
+                                                    <a href="#commentsForm" class="btn btn--reply">
                                                         Repondre
                                                     </a>
                                                 </div>

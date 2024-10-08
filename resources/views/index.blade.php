@@ -38,9 +38,9 @@
 
                 @foreach ($posts as $post)
                 <div class="portfolio__item">
-                    <a href="{{route('posts.show', $post)}}" target="_top" class="portfolio__item-link">
+                    <a href="{{route('articles.show', [$post->slug(), $post] )}}" target="_top" class="portfolio__item-link">
                         <div class="portfolio__item-img">
-                            <img src="img/project-{{$loop->iteration}}.jpg" alt="Dostoyevsky website">
+                            <img src="img/article-{{$loop->iteration}}.jpg" alt="Dostoyevsky website">
                         </div>
                         <div class="portfolio__item-title">
                             <h5 class="portfolio__title"> {{$post->title}} </h5>
@@ -134,9 +134,9 @@
                     <div class="row">
                         <div class="col">
                             <div class="home__blog-wrapper">
-                                <a href="{{route($last_post->exists ? 'posts.show' : 'posts.index', $last_post)}}" class="home__blog-preview">
+                                <a href="{{route('articles.show', [$last_post->slug(), $last_post])}}" class="home__blog-preview">
                                     <div class="home__blog-preview-img">
-                                        <img src="img/post-1--lg.jpg" alt="New in blog">
+                                        <img src="img/article-{{$last_post->id}}.jpg" alt="New in blog">
                                     </div>
                                     <h3 class="home__blog-preview-title "> {{$last_post->title}} </h3>
                                     <p class="home__blog-preview-text"> {{Str::limit($last_post->content, 300)}}.</p>
@@ -144,7 +144,7 @@
                                 </a>
                                 <div class="home__blog-title">
                                     <h2 class="home__blog-title-text">Nouvel&nbsp; arcticle</h2>
-                                    <a href="blog.html" class="btn home__blog-link">Voir plus</a>
+                                    <a href="{{route('articles.index')}}" class="btn home__blog-link">Voir plus</a>
                                 </div>
                             </div>
                         </div>
