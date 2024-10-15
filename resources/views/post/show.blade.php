@@ -1,6 +1,6 @@
 @extends('base')
 
-@section('title', config('app.name').'-work/{{$pots->title}}')
+@section('title', config('app.name').'-'.$post->title)
 
 @section('content')
 
@@ -44,13 +44,13 @@
                     <div class="row">
                         <div class="col col--sm-10 col--sm-offset-1 col--md-10 col--md-offset-1 col--lg-8 col--lg-offset-2">
                             <div class="article__shares-icon">
-                                <a href="https://x.com/"><i class="icon icon--twitter"></i></a>
+                                <a href="https://x.com/" target="__blanc" ><i class="icon icon--twitter"></i></a>
                             </div>
                             <div class="article__shares-icon">
-                                <a href="https://web.facebook.com/"><i class="icon icon--facebook"></i></a>
+                                <a href="https://web.facebook.com/" target="__blanc" ><i class="icon icon--facebook"></i></a>
                             </div>
                             <div class="article__shares-icon">
-                                <a href="https://www.pinterest.fr/"><i class="icon icon--pinterest"></i></a>
+                                <a href="https://www.pinterest.fr/" target="__blanc" ><i class="icon icon--pinterest"></i></a>
                             </div>
                         </div>
                     </div>

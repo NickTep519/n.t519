@@ -55,7 +55,7 @@
                 @endforeach
 
                 <div class="portfolio__more">
-                    <a href="{{route('posts.index')}}"><button class="btn portfolio__more-btn">Afficher plus</button></a>
+                    <a href="{{route('articles.index')}}"><button class="btn portfolio__more-btn">Afficher plus</button></a>
                 </div>
             </div>                  <!-- end of portfolio -->
         </div>

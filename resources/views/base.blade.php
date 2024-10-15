@@ -9,7 +9,7 @@
         <meta name="keywords" content="">
         <meta name="author" content="">
 
-        <link rel="shortcut icon" href="img/me.ico">
+        <link rel="shortcut icon" href="{{asset('img/me.ico')}}">
 
         <!-- Lien vers le CSS de SimpleMDE -->
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/simplemde/latest/simplemde.min.css">
